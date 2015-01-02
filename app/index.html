@@ -1,21 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Using $route Service</title>
-	<link rel="stylesheet" href="lib/bootstrap/bootstrap.min.css" />
-	<link rel="stylesheet" href="lib/bootstrap/bootstrap-theme.min.css" />
+	<title>Ads Project AngularJS</title>
+	<!--<link rel="stylesheet" href="lib/bootstrap/bootstrap.min.css" />-->
+	<!--<link rel="stylesheet" href="lib/bootstrap/bootstrap-theme.min.css" />-->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
 	<link rel="stylesheet" type="text/css" href="css/app.css" />
-</head>
-<body ng-app="softUniApp">
-	<div class="container">
-		<div class="navbar">
-			<ul class="nav">
-				<li><a href="#/newAd">New Ad</a></li>
-				<li><a href="#/ads">All Ads</a></li>
-			</ul>
-		</div>
 
-		<ng-view></ng-view>
+</head>
+<body ng-app="adsApp" ng-cloak>
+	<div class="container">
+		<div class="navbar navbar-inverse">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-inverse-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">Ads - Home</a>
+			</div>
+			<div class="navbar-collapse collapse navbar-inverse-collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="#/login">Login</a></li>
+					<li><a href="#/register">Register</a></li>
+				</ul>
+
+			</div>
+		</div>
+		<div class="jumbotron" >
+			{{2+2}}
+		</div>
+		<ng-view>
+
+		</ng-view>
 	</div>
 
 	<script src="lib/angular/angular.js"></script>
