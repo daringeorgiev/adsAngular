@@ -1,0 +1,41 @@
+<div class="jumbotron row" >
+    <div class="mainContent col-md-8">
+        <!--Main Content-->
+        <div ng-repeat="ad in data.ads" class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">{{ad.title}}
+                    <span class="date">{{ad.date | date: 'd-MMM-yyyy'}}</span>
+                </h3>
+            </div>
+            <div class="panel-body row">
+                <div class="col-md-4" id="imageContainer"><img class="image" src="../img/no_image.gif" ng-src="{{ad.imageDataUrl}}"></div>
+                <div class="col-md-8" id="dateContainer">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            {{ad.text}}
+                        </div>
+                    </div>
+                    <div><strong>Name:</strong> {{ad.ownerName}}</div>
+                    <div><strong>E-mail:</strong> {{ad.ownerEmail}}</div>
+                    <div><strong>Phone:</strong> {{ad.ownerPhone}}</div>
+                </div>
+            </div>
+        </div>
+        <!--<ul>-->
+            <!--<li ng-repeat="ad in data.ads" class="well">-->
+                <!--<a href="#/ads/{{ad.id}}">-->
+                    <!--<h1>{{ad.title}}</h1>-->
+                    <!--<div><strong>Text:</strong> {{ad.text}}</div>-->
+                    <!--<div><strong>Town:</strong> {{ad.townName}}</div>-->
+                    <!--<div><strong>Category:</strong> {{ad.categoryName}}</div>-->
+                    <!--<div><strong>Status:</strong> {{ad.status}}</div>-->
+                <!--</a>-->
+            <!--</li>-->
+        <!--</ul>-->
+    </div>
+
+    <div class="filters col-md-4">
+        Filters
+    </div>
+
+</div>
