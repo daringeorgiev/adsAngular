@@ -34,7 +34,32 @@
     </div>
 
     <div class="filters col-md-4">
-        Filters
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                <h3 class="panel-title">Categories</h3>
+            </div>
+            <div class="panel-body">
+                <ul class="filterAds">
+                    <li>All</li>
+                    <li ng-repeat="cat in categories">
+                        {{cat.name}}
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                <h3 class="panel-title">Towns</h3>
+            </div>
+            <div class="panel-body">
+                <ul class="filterAds">
+                    <li>All</li>
+                    <li ng-repeat="town in towns">
+                        {{town.name}}
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
 
 </div>
