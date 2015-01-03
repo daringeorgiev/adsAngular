@@ -3,7 +3,8 @@
  */
 adsApp.controller('allAdsController', function($scope, $route, $log, adsDataService) {
     adsDataService.getAllAds(function (resp) {
-            $scope.data = resp;
+        $scope.data = resp;
+        $scope.allPages=$scope.date.numPages;
     });
 
     adsDataService.getAllTowns(function (resp) {
@@ -12,14 +13,31 @@ adsApp.controller('allAdsController', function($scope, $route, $log, adsDataServ
     adsDataService.getAllCategories(function (resp) {
         $scope.categories = resp;
     });
-        //.$promise
-        //.then(function (data) {
-        //    $scope.data = data;))
-        //}, function (error) {
-        //    $log.error(error);
-        //});
 
-    //$scope.reload = function () {
-    //    $route.reload();
+    $scope.pages=[1, 2, 3, $scope.numPages];
+    //for (var i=1;i<=$scope.data.numPages; i++){
+    //    pages.push(i);
+    //}
+
+    //$scope.users = [];
+    //$scope.totalUsers = 0;
+    //$scope.usersPerPage = 25; // this should match however many results your API puts on one page
+    //getResultsPage(1);
+    //
+    //$scope.pagination = {
+    //    current: 1
+    //};
+    //
+    //$scope.pageChanged = function(newPage) {
+    //    getResultsPage(newPage);
+    //};
+    //
+    //function getResultsPage(pageNumber) {
+    //    // this is just an example, in reality this stuff should be in a service
+    //    $http.get('path/to/api/users?page=' + pageNumber)
+    //        .then(function(result) {
+    //            $scope.users = result.data.Items;
+    //            $scope.totalUsers = result.data.Count
+    //        });
     //}
 });

@@ -1,4 +1,4 @@
-<div class="jumbotron row" >
+<div class="jumbotron row" ng-cloak>
     <div class="mainContent col-md-8">
         <!--Main Content-->
         <div ng-repeat="ad in data.ads" class="panel panel-primary">
@@ -23,14 +23,22 @@
         </div>
 
         <ul class="pagination">
-            <li class="disabled"><a href="#">«</a></li>
-            <li class="active"><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li><a href="#">5</a></li>
-            <li><a href="#">»</a></li>
+            <li ng-repeat="page in pages"><a href="#">{{page}}</a></li>
         </ul>
+
+        <!--<div data-pagination="" data-num-pages="numPages()"-->
+             <!--data-current-page="currentPage" data-max-size="maxSize"-->
+             <!--data-boundary-links="true"></div>-->
+
+        <!--<ul class="pagination">-->
+            <!--<li class="disabled"><a href="#">«</a></li>-->
+            <!--<li class="active"><a href="#">1</a></li>-->
+            <!--<li><a href="#">2</a></li>-->
+            <!--<li><a href="#">3</a></li>-->
+            <!--<li><a href="#">4</a></li>-->
+            <!--<li><a href="#">5</a></li>-->
+            <!--<li><a href="#">»</a></li>-->
+        <!--</ul>-->
     </div>
 
     <div class="filters col-md-4">
@@ -41,8 +49,8 @@
             <div class="panel-body">
                 <ul class="filterAds">
                     <li>All</li>
-                    <li ng-repeat="cat in categories">
-                        {{cat.name}}
+                    <li ng-repeat="cat in categories" >
+                        {{cat.name}} {{ cat.id}}
                     </li>
                 </ul>
             </div>

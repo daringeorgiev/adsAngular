@@ -1,5 +1,6 @@
-.filterAds{
+.filterAds  li{
     list-style-type: none;
+    padding: 2%;
 }
 .adsTextarea{
     width: 100%;
