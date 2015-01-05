@@ -5,7 +5,8 @@ adsApp.directive('leftPublicSidebar', function(){
    return {
        controller: 'HomeCtrl',
        restrict: 'E',
-       templateUrl: '../../templates/public/left-sidebar.html',
-       replace: true
+       //template: '<div> dasdsadsadsa </div>',
+       templateUrl: '../../templates/public/left-sidebar.html'
+       //replace: true
    }
 });

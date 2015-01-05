@@ -1,10 +1,28 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
+<div>
+    <div ng-repeat="ad in data.ads" class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">{{ad.title}}
+                <span class="date">{{ad.date | date: 'd-MMM-yyyy'}}</span>
+            </h3>
+        </div>
+        <div class="panel-body row">
+            <div class="col-md-4" id="imageContainer"><img class="image" src="../img/no_image.gif" ng-src="{{ad.imageDataUrl}}"></div>
+            <div class="col-md-8" id="dateContainer">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        {{ad.text}}
+                    </div>
+                </div>
+                <div><strong>Name:</strong> {{ad.ownerName}}</div>
+                <div><strong>E-mail:</strong> {{ad.ownerEmail}}</div>
+                <div><strong>Phone:</strong> {{ad.ownerPhone}}</div>
+            </div>
+        </div>
+    </div>
 
-</body>
-</html>
+    {{data.numPages}}
+
+    <ul class="pagination">
+        <li ng-repeat="page in [] | range: 5"><a href="#">{{$index}}</a></li>
+    </ul>
+</div>

@@ -2,7 +2,9 @@
  * Created by darin on 1/2/2015.
  */
 'use strict';
-adsApp.controller('allAdsController', function($scope, $route, $log, adsDataService) {
+adsApp.controller('HomeCtrl', function($scope, $route, $log, adsDataService) {
+    $scope.pageTitle='Home';
+
     adsDataService.getAllAds(function (resp) {
         $scope.data = resp;
     });
