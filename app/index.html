@@ -2,50 +2,63 @@
 <html>
 <head>
 	<title>Ads Project AngularJS</title>
-	<!--<link rel="stylesheet" href="lib/bootstrap/bootstrap.min.css" />-->
+	<link rel="stylesheet" href="lib/bootstrap/bootstrap.min.css" />
 	<!--<link rel="stylesheet" href="lib/bootstrap/bootstrap-theme.min.css" />-->
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+	<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />-->
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
 	<link rel="stylesheet" type="text/css" href="css/app.css" />
 
 </head>
 <body ng-app="adsApp" ng-cloak>
-	<div class="container">
-		<div class="navbar navbar-default">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-inverse-collapse">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="#">Ads - Home</a>
-			</div>
-			<div class="navbar-collapse collapse navbar-inverse-collapse">
-				<ul class="nav navbar-nav">
-					<li><a href="#/login">Login</a></li>
-					<li><a href="#/register">Register</a></li>
-				</ul>
+	<!--<div class="container">-->
+		<!--<div class="navbar navbar-default">-->
+			<!--<div class="navbar-header">-->
+				<!--<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-inverse-collapse">-->
+					<!--<span class="icon-bar"></span>-->
+					<!--<span class="icon-bar"></span>-->
+					<!--<span class="icon-bar"></span>-->
+				<!--</button>-->
+				<!--<a class="navbar-brand" href="#">Ads - Home</a>-->
+			<!--</div>-->
+			<!--<div class="navbar-collapse collapse navbar-inverse-collapse">-->
+				<!--<ul class="nav navbar-nav">-->
+					<!--<li><a href="#/login">Login</a></li>-->
+					<!--<li><a href="#/register">Register</a></li>-->
+				<!--</ul>-->
 
-			</div>
-		</div>
-		<ng-view>
+			<!--</div>-->
+		<!--</div>-->
+		<!--<ng-view>-->
 
-		</ng-view>
+		<!--</ng-view>-->
 
 
-	</div>
+	<!--</div>-->
+
+	<ng-view>
+	</ng-view>
+
 	<div class="navbar-default navbar-fixed-bottom footer">
 		<Span>&#169 2015 by Darin Georgiev, No Rights Reserved</Span>
 	</div>
+
 	<script src="lib/angular/angular.js"></script>
 	<script src="lib/angular/angular-route.js"></script>
 	<script src="lib/angular/angular-resource.js"></script>
+	<script src="lib/bootstrap/bootstrap.min.js"></script>
+	<script src="lib/jquery/jquery-2.1.3.min.js"></script>
 	<script src="js/app.js"></script>
+	<!--Services-->
 	<script src="js/services/adsData.js"></script>
-	<!--<script src="js/services/requester.js"></script>-->
-	<script src="js/controllers/allAdsController.js"></script>
+	<!--Controllers-->
+	<script src="js/controllers/HomeCtrl.js"></script>
 	<script src="js/controllers/loginController.js"></script>
 	<script src="js/controllers/registerController.js"></script>
+	<!--Directives-->
+	<script src="js/directives/categories.js"></script>
+	<script src="js/directives/left-sidebar.js"></script>
+	<script src="js/directives/public-ads.js"></script>
+	<script src="js/directives/towns.js"></script>
 
 </body>
 </html>

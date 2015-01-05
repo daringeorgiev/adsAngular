@@ -22,9 +22,12 @@
             </div>
         </div>
 
+        {{data.numPages}}
+
         <ul class="pagination">
-            <li ng-repeat="page in pages"><a href="#">{{page}}</a></li>
+            <li ng-repeat="page in [] | range: 5"><a href="#">{{$index}}</a></li>
         </ul>
+
 
         <!--<div data-pagination="" data-num-pages="numPages()"-->
              <!--data-current-page="currentPage" data-max-size="maxSize"-->

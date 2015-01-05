@@ -1,10 +1,10 @@
 /**
  * Created by darin on 1/2/2015.
  */
+'use strict';
 adsApp.controller('allAdsController', function($scope, $route, $log, adsDataService) {
     adsDataService.getAllAds(function (resp) {
         $scope.data = resp;
-        $scope.allPages=$scope.date.numPages;
     });
 
     adsDataService.getAllTowns(function (resp) {
@@ -14,7 +14,9 @@ adsApp.controller('allAdsController', function($scope, $route, $log, adsDataServ
         $scope.categories = resp;
     });
 
-    $scope.pages=[1, 2, 3, $scope.numPages];
+    //$scope.allPages=$scope.data.numPages;
+
+    //$scope.pages=[1, 2, 3];
     //for (var i=1;i<=$scope.data.numPages; i++){
     //    pages.push(i);
     //}
