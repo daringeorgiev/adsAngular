@@ -1,66 +1,74 @@
+<header class="navbar navbar-default">
+    <h1 class="header">Ads - {{ctrl.pageTitle}}</h1>
+</header>
 <div class="jumbotron row">
-    <form class="form-horizontal col-sm-6 col-sm-offset-3">
-        <fieldset>
-            <legend>Register</legend>
-            <div class="form-group">
-                <label for="username" class="col-lg-2 control-label">Username</label>
-                <div class="col-lg-10">
-                    <input class="form-control" id="username" placeholder="Username" type="text">
-                </div>
+    <div id="wrapper">
+        <div class="row">
+            <div class="col-md-3">
+                <left-public-sidebar></left-public-sidebar>
             </div>
-            <div class="form-group">
-                <label for="inputPassword" class="col-lg-2 control-label">Password</label>
-                <div class="col-lg-10">
-                    <input class="form-control" id="inputPassword" placeholder="Password" type="password">
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="confirmPassword" class="col-lg-2 control-label">Confirm password</label>
-                <div class="col-lg-10">
-                    <input class="form-control" id="confirmPassword" placeholder="Confirm password" type="password">
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="name" class="col-lg-2 control-label">Name</label>
-                <div class="col-lg-10">
-                    <input class="form-control" id="name" placeholder="Name" type="text">
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="inputEmail" class="col-lg-2 control-label">Email</label>
-                <div class="col-lg-10">
-                    <input class="form-control" id="inputEmail" placeholder="Email" type="text">
-                </div>
-            </div>
+            <form class="form-horizontal col-sm-8">
+                <fieldset>
+                    <!--<legend>Register</legend>-->
+                    <div class="form-group">
+                        <label for="username" class="col-lg-2 control-label">Username</label>
+                        <div class="col-lg-10">
+                            <input class="form-control" id="username" placeholder="Username" type="text" ng-model="ctrl.user.username">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+                        <div class="col-lg-10">
+                            <input class="form-control" id="inputPassword" placeholder="Password" type="password" ng-model="ctrl.user.password">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmPassword" class="col-lg-2 control-label">Confirm password</label>
+                        <div class="col-lg-10">
+                            <input class="form-control" id="confirmPassword" placeholder="Confirm password" type="password" ng-model="ctrl.user.confirmPassword">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="name" class="col-lg-2 control-label">Name</label>
+                        <div class="col-lg-10">
+                            <input class="form-control" id="name" placeholder="Name" type="text" ng-model="ctrl.user.name">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+                        <div class="col-lg-10">
+                            <input class="form-control" id="inputEmail" placeholder="Email" type="text"  ng-model="ctrl.user.email">
+                        </div>
+                    </div>
 
-            <div class="form-group">
-                <label for="phone" class="col-lg-2 control-label">Phone</label>
-                <div class="col-lg-10">
-                    <input class="form-control" id="phone" placeholder="Phone" type="number">
-                </div>
-            </div>
+                    <div class="form-group">
+                        <label for="phone" class="col-lg-2 control-label">Phone</label>
+                        <div class="col-lg-10">
+                            <input class="form-control" id="phone" placeholder="Phone" type="tel" ng-model="ctrl.user.phone">
+                        </div>
+                    </div>
 
-            <div class="form-group">
-                <label for="select" class="col-lg-2 control-label">Town:</label>
-                <div class="col-lg-10">
-                    <select class="form-control" id="select">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                    </select>
-                    <br>
+                    <div class="form-group">
+                        <label for="select" class="col-lg-2 control-label">Town:</label>
+                        <div class="col-lg-10">
+                            <select class="form-control" id="select" ng-options="town.id as town.name for town in towns" ng-model="ctrl.user.selectedTownId">
 
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-lg-10 col-lg-offset-2">
-                    <button type="submit" class="btn btn-primary">Register</button>
-                    <a href="#"><button class="btn btn-default">Cancel</button></a>
-                </div>
-            </div>
-        </fieldset>
-    </form>
+                            </select>
+                            <br>
+                            {{ctrl.user.selectedTownId}}
+                            {{ctrl.user}}
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-lg-10 col-lg-offset-2">
+                            <button type="submit" class="btn btn-primary" ng-click="ctrl.register(ctrl.user)">Register</button>
+                            <a href="#"><button class="btn btn-default">Cancel</button></a>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+
 </div>
 

@@ -1,4 +1,6 @@
 var adsApp = angular.module('adsApp', ['ngResource', 'ngRoute'])
+    .constant('baseServiceUrl', 'http://softuni-ads.azurewebsites.net/api/')
+
     .config(function ($routeProvider) {
         $routeProvider.when('/', {
             templateUrl: '../templates/home.html',
@@ -6,11 +8,11 @@ var adsApp = angular.module('adsApp', ['ngResource', 'ngRoute'])
         });
         $routeProvider.when('/login', {
             templateUrl: 'templates/login.html',
-            controller: 'loginController'
+            controller: 'LoginCtrl'
         });
         $routeProvider.when('/register', {
             templateUrl: 'templates/register.html',
-            controller: 'registerController'
+            controller: 'RegisterCtrl as ctrl'
         });
         $routeProvider.otherwise({
             templateUrl: '../templates/html.html',
