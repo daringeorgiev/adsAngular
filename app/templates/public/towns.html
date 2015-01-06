@@ -3,10 +3,11 @@
         <h3 class="panel-title">Towns</h3>
     </div>
     <div class="panel-body">
-        <ul class="filterAds">
-            <li>All</li>
+        <ul class="nav">
+            <!--class="filterAds"-->
+            <li><a>All</a></li>
             <li ng-repeat="town in towns">
-                {{town.name}}
+                <a>{{town.name}}</a>
             </li>
         </ul>
     </div>

@@ -1,4 +1,4 @@
-var adsApp = angular.module('adsApp', ['ngResource', 'ngRoute'])
+var adsApp = angular.module('adsApp', ['ngResource', 'ngRoute', 'ui.bootstrap.pagination'])
     .constant('baseServiceUrl', 'http://softuni-ads.azurewebsites.net/api/')
 
     .config(function ($routeProvider) {
@@ -15,7 +15,6 @@ var adsApp = angular.module('adsApp', ['ngResource', 'ngRoute'])
             controller: 'RegisterCtrl as ctrl'
         });
         $routeProvider.otherwise({
-            templateUrl: '../templates/html.html',
-            controller: 'HomeCtrl as ctrl'
+            redirectTo: '/'
         });
     });

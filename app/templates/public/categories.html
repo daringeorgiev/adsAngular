@@ -3,10 +3,16 @@
         <h3 class="panel-title">Categories</h3>
     </div>
     <div class="panel-body">
-        <ul class="filterAds">
-            <li>All</li>
-            <li ng-repeat="cat in categories" >
-                {{cat.name}} {{ cat.id}}
+        <ul class="nav">
+            <li  class="active">
+                    <!--ng-class="{'active' : selectedCategoryId == null}"-->
+                 <!--ng-click="categoryClicked(null)">-->
+                    <a>All</a>
+            </li>
+            <li ng-repeat="cat in categories"
+                ng-click="categoryClicked(category.id)"
+                ng-class="{'active' : selectedCategoryId == category.id}">
+                    <a>{{cat.name}} {{ cat.id}}</a>
             </li>
         </ul>
     </div>
