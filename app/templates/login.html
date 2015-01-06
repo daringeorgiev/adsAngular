@@ -1,26 +1,36 @@
+<header class="navbar navbar-default">
+    <h1 class="header">Ads - {{ctrl.pageTitle}}</h1>
+</header>
 <div class="jumbotron row">
-    <form class="form-horizontal col-sm-6 col-sm-offset-3">
-        <fieldset>
-            <legend>Login</legend>
-            <div class="form-group">
-                <label for="username" class="col-lg-2 control-label">Username</label>
-                <div class="col-lg-10">
-                    <input class="form-control" id="username" placeholder="Username" type="text">
-                </div>
+    <div id="wrapper">
+        <div class="row">
+            <div class="col-md-3">
+                <left-public-sidebar></left-public-sidebar>
             </div>
-            <div class="form-group">
-                <label for="inputPassword" class="col-lg-2 control-label">Password</label>
-                <div class="col-lg-10">
-                    <input class="form-control" id="inputPassword" placeholder="Password" type="password">
-                </div>
-            </div>
+            <form class="form-horizontal col-sm-8">
+                <fieldset>
+                    <div class="form-group">
+                        <label for="username" class="col-lg-2 control-label">Username</label>
+                        <div class="col-lg-10">
+                            <input class="form-control" id="username" placeholder="Username" type="text" ng-model="ctrl.user.username">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+                        <div class="col-lg-10">
+                            <input class="form-control" id="inputPassword" placeholder="Password" type="password" ng-model="ctrl.user.password">
+                        </div>
+                    </div>
 
-            <div class="form-group">
-                <div class="col-lg-10 col-lg-offset-2">
-                    <button type="submit" class="btn btn-primary">Login</button>
-                    <a href="#/register"><button class="btn btn-default">Register</button></a>
-                </div>
-            </div>
-        </fieldset>
-    </form>
+                    <div class="form-group">
+                        <div class="col-lg-10 col-lg-offset-2">
+                            <button type="submit" class="btn btn-primary">Login</button>
+                            <a href="#/register"><button class="btn btn-default">Register</button></a>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+
 </div>

@@ -51,11 +51,11 @@
                     <div class="form-group">
                         <label for="select" class="col-lg-2 control-label">Town:</label>
                         <div class="col-lg-10">
-                            <select class="form-control" id="select" ng-options="town.id as town.name for town in towns" ng-model="ctrl.user.selectedTownId">
+                            <select class="form-control" id="select" ng-options="town.id as town.name for town in towns" ng-model="ctrl.user.townId">
 
                             </select>
                             <br>
-                            {{ctrl.user.selectedTownId}}
+                            {{ctrl.user.townId}}
                             {{ctrl.user}}
                         </div>
                     </div>

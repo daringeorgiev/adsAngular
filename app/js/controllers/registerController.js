@@ -8,7 +8,7 @@ adsApp.controller('RegisterCtrl', ['$scope', 'townsData', 'userData', function($
     townsData.getTowns()
         .$promise
         .then(function(data){
-            this.towns=data;
+            $scope.towns=data;
         });
     this.register=function(user){
         userData.register(user);
