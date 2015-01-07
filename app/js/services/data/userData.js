@@ -16,7 +16,7 @@ adsApp.factory('userData', ['$resource', 'baseServiceUrl', function($resource, b
     function loginUser(user){
         return $resource(baseServiceUrl + 'user/login')
             .save(user)
-            .promise
+            .$promise
             .then(function (data){
                 authentication.saveUser(data);
             });
@@ -25,16 +25,21 @@ adsApp.factory('userData', ['$resource', 'baseServiceUrl', function($resource, b
     function logoutUser(){
         return $resource(baseServiceUrl + 'user/login')
             .save(user)
-            .promise
+            .$promise
             .then(function (data){
-                authentication.saveUser(data);
+                authentication.removeUser(data);
             });
 
+    }
+
+    function removeUser(){
+        localStorage.removeItem(key);
     }
 
     return {
         register: registerUser,
         login: loginUser,
-        logout: logoutUser
+        logout: logoutUser,
+        removeUser: removeUser
     }
 }])
