@@ -36,10 +36,15 @@ adsApp.factory('userData', ['$resource', 'baseServiceUrl', 'authentication', fun
         localStorage.removeItem(key);
     }
 
+    function isAdmin(){
+        var isAdmin=getUserData().isAdmin;
+        return isAdmin;
+    }
     return {
         register: registerUser,
         login: loginUser,
         logout: logoutUser,
-        removeUser: removeUser
+        removeUser: removeUser,
+        isAdmin: isAdmin
     }
 }])
