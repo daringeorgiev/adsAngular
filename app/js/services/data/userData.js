@@ -1,7 +1,7 @@
 /**
  * Created by darin on 1/6/2015.
  */
-adsApp.factory('userData', ['$resource', 'baseServiceUrl', function($resource, baseServiceUrl){
+adsApp.factory('userData', ['$resource', 'baseServiceUrl', 'authentication', function($resource, baseServiceUrl, authentication){
 
     //var resource=$resource(baseServiceUrl, paramDefault, actions)
     function registerUser(user){
