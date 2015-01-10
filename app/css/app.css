@@ -1,3 +1,7 @@
+.panel-title {
+    /*width: 80%;*/
+    /*float: left;*/
+}
 .panel {
     word-wrap: break-word;
 }

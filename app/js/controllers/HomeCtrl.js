@@ -22,7 +22,7 @@ adsApp.controller('HomeCtrl', ['$scope', '$route', '$log', 'adsData', 'categorie
 
     self.pageTitle='Home';
 
-    self.data=adsData.getAllAds();
+    self.data=adsData.getAllAds(1);
     self.categories = categoriesData.getCategories();
     self.towns = townsData.getTowns();
 }]);
