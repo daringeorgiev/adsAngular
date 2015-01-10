@@ -15,7 +15,7 @@ var adsApp = angular.module('adsApp', ['ngResource', 'ngRoute', 'ui.bootstrap.pa
             controller: 'RegisterCtrl as ctrl'
         });
         $routeProvider.when('/user/home', {
-            templateUrl: 'templates/user/home.html',
+            templateUrl: '../templates/user/homeUser.html',
             controller: 'UserCtrl as ctrl'
         });
         $routeProvider.when('/user/ads', {

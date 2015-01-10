@@ -19,13 +19,6 @@ adsApp.factory('userData', ['$resource', '$location', 'baseServiceUrl', 'authent
             .$promise
             .then(function (data) {
                 authentication.saveUser(data);
-                //
-                //$location.path('/#');
-                //$scope.pageTitle='Aaa';
-                //console.log('bravo ' + data.name);
-                //}, function(data){
-                //    console.log('error ' + data);
-                //});
             });
     }
 

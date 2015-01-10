@@ -3,15 +3,15 @@
         <h3 class="panel-title">Categories</h3>
     </div>
     <div class="panel-body">
-        <ul class="nav">
-            <li  class="selected">
-                    <!--ng-class="{'active' : selectedCategoryId == null}"-->
-                 <!--ng-click="categoryClicked(null)">-->
-                    <a>All</a>
+        <ul class="nav nav-pills nav-stacked">
+            <li  ng-click="ctrl.categoryClicked()"
+                 ng-class="{'active' : ctrl.selectedCategoryId == ''}">
+                <a>All</a>
             </li>
-            <li ng-repeat="cat in ctrl.categories"
-                ng-click="categoryClicked(category.id)"
-                ng-class="{'active' : selectedCategoryId == category.id}">
+            <li  ng-repeat="cat in ctrl.categories"
+                ng-click="ctrl.categoryClicked(cat.id)"
+                ng-class="{'active' : ctrl.selectedCategoryId == cat.id}">
+
                     <a>{{cat.name}} {{ cat.id}}</a>
             </li>
         </ul>

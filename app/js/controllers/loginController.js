@@ -2,7 +2,7 @@
  * Created by darin on 1/2/2015.
  */
 'use strict';
-adsApp.controller('LoginCtrl', ['$scope', '$location', 'notify','userData', function($scope, $location,notify, userData){
+adsApp.controller('LoginCtrl', ['$scope', '$location', 'notify','userData', function($scope, $location, notify, userData){
     this.pageTitle='Login';
 
     this.login=function(user){

@@ -3,10 +3,15 @@
         <h3 class="panel-title">Towns</h3>
     </div>
     <div class="panel-body">
-        <ul class="nav">
+        <ul class="nav nav nav-pills nav-stacked">
             <!--class="filterAds"-->
-            <li><a>All</a></li>
-            <li ng-repeat="town in ctrl.towns">
+            <li ng-click="ctrl.townClicked(0)"
+                ng-class="{'active' : ctrl.selectedTownId == 0}">
+                <a>All</a>
+            </li>
+            <li ng-repeat="town in ctrl.towns"
+                ng-click="ctrl.townClicked(town.id)"
+                ng-class="{'active' : ctrl.selectedTownId == town.id}">
                 <a>{{town.name}}</a>
             </li>
         </ul>

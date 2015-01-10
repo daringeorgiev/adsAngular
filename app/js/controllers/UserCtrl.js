@@ -1,15 +1,22 @@
-adsApp.controller('UserCtrl', ['$scope', '$route', '$log', 'adsData', 'categoriesData', 'townsData', function($scope, $route, $log, adsData, categoriesData, townsData) {
+adsApp.controller('UserCtrl', ['$scope', '$route', '$location', 'adsData', 'categoriesData', 'townsData', 'userData', 'notify',
+    function($scope, $route, $location, adsData, categoriesData, townsData, userData, notify) {
     var self=this;
 
     self.pageTitle='User Home';
     self.currentPageIndex=1;
+    self.selectedCategoryId=0;
+    self.selectedTownId=0;
+    self.filterIds={
+        categoryId: '',
+        townId:''
+    };
 
     self.data=adsData.getAllAds(1);
     self.categories = categoriesData.getCategories();
     self.towns = townsData.getTowns();
 
 
-    self.pagesCount=adsData.getAllAds(1).numItems;
+    //self.pagesCount=adsData.getAllAds(1).numItems;
     self.pages=[];
     for(var i=1; i<=5 ;i++){
         self.pages.push(i);
@@ -18,41 +25,38 @@ adsApp.controller('UserCtrl', ['$scope', '$route', '$log', 'adsData', 'categorie
     self.setPage = function(pageIndex){
         self.data=adsData.getAllAds(pageIndex);
         self.currentPageIndex=pageIndex;
+        //$location.path('/user/home');
+        //$route.reload();
     };
 
-    //self.setPagination = function(){
-    //    for(var i=1; i<= adsData.getAllAds(1).numPages ;i++){
-    //        self.pages.push(i);
-    //    }
-    //};
+    self.categoryClicked= function(index){
+        self.selectedCategoryId=index;
+        self.filterIds.categoryId=index;
+        self.filterAds(self.filterIds);
+    };
+
+    self.townClicked= function(index){
+        self.selectedTownId=index;
+        self.filterIds.townId=index;
+        self.filterAds(self.filterIds);
+    };
+
+    self.filterAds = function(filter){
+        self.data=adsData.filterAds(filter);
+    };
 
 
-    //self.cat=[];
-    //self.cat[0]=self.data;
-
-    //adsData.getAllAds(function (resp) {
-    //    self.data = resp;
-    //});
-
-
-
-
-    //adsData.getAllTowns(function (resp) {
-    //    self.towns = resp;
-    //});
-
-    //categoriesData.getCategories(function (resp) {
-    //    self.categories = resp;
-    //});
-
-    //self.categories = categoriesData.getCategories();
-
-    //self.cat[0]= self.categories;
-    //categoriesData.getAllCategories(function (resp){
-    //    self.categories = resp;
-    //});
-    //adsData.getAllCategories(function (resp) {
-    //    $scope.categories = resp;
-    //});
-
+    self.logout = function(){
+        userData.logout();
+            //.then(function(){
+            //    $location.path('/home');
+            //    notify({ message:'Logout success', classes:'alert-success'});
+            //}, function(){
+            //    notify({ message:'Logout error', classes:'alert-danger'});
+            //}
+        //);
+        //console.log('logout error');
+        //notify('logout');
+        //self.currentPageIndex=pageIndex;
+    };
 }]);

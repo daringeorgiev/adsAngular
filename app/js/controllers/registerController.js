@@ -2,7 +2,7 @@
  * Created by darin on 1/2/2015.
  */
 'use strict';
-adsApp.controller('RegisterCtrl', ['$scope', 'townsData', 'userData', function($scope, townsData, userData){
+adsApp.controller('RegisterCtrl', ['$scope', '$location', 'townsData', 'userData', 'notify', function($scope, $location, townsData, userData, notify){
     this.pageTitle='Register';
 
     townsData.getTowns()
