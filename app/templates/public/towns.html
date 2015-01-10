@@ -5,8 +5,8 @@
     <div class="panel-body">
         <ul class="nav nav nav-pills nav-stacked">
             <!--class="filterAds"-->
-            <li ng-click="ctrl.townClicked(0)"
-                ng-class="{'active' : ctrl.selectedTownId == 0}">
+            <li ng-click="ctrl.townClicked('')"
+                ng-class="{'active' : ctrl.selectedTownId == ''}">
                 <a>All</a>
             </li>
             <li ng-repeat="town in ctrl.towns"

@@ -4,8 +4,8 @@ adsApp.controller('UserCtrl', ['$scope', '$route', '$location', 'adsData', 'cate
 
     self.pageTitle='User Home';
     self.currentPageIndex=1;
-    self.selectedCategoryId=0;
-    self.selectedTownId=0;
+    self.selectedCategoryId='';
+    self.selectedTownId='';
     self.filterIds={
         categoryId: '',
         townId:''
