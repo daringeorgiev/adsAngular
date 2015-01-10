@@ -1,7 +1,7 @@
 /**
  * Created by darin on 1/6/2015.
  */
-adsApp.factory('userData', ['$resource', 'baseServiceUrl', 'authentication', function($resource, baseServiceUrl, authentication){
+adsApp.factory('userData', ['$resource', '$location', 'baseServiceUrl', 'authentication', function($resource, $location, baseServiceUrl, authentication){
 
     //var resource=$resource(baseServiceUrl, paramDefault, actions)
     function registerUser(user){
@@ -17,8 +17,15 @@ adsApp.factory('userData', ['$resource', 'baseServiceUrl', 'authentication', fun
         return $resource(baseServiceUrl + 'user/login')
             .save(user)
             .$promise
-            .then(function (data){
+            .then(function (data) {
                 authentication.saveUser(data);
+                //
+                //$location.path('/#');
+                //$scope.pageTitle='Aaa';
+                //console.log('bravo ' + data.name);
+                //}, function(data){
+                //    console.log('error ' + data);
+                //});
             });
     }
 
@@ -29,7 +36,6 @@ adsApp.factory('userData', ['$resource', 'baseServiceUrl', 'authentication', fun
             .then(function (data){
                 authentication.removeUser(data);
             });
-
     }
 
     function removeUser(){
@@ -37,8 +43,8 @@ adsApp.factory('userData', ['$resource', 'baseServiceUrl', 'authentication', fun
     }
 
     function isAdmin(){
-        var isAdmin=getUserData().isAdmin;
-        return isAdmin;
+        //var isAdmin=getUserData.isAdmin;
+        //return isAdmin;
     }
     return {
         register: registerUser,

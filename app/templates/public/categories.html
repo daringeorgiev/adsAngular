@@ -9,7 +9,7 @@
                  <!--ng-click="categoryClicked(null)">-->
                     <a>All</a>
             </li>
-            <li ng-repeat="cat in categories"
+            <li ng-repeat="cat in ctrl.categories"
                 ng-click="categoryClicked(category.id)"
                 ng-class="{'active' : selectedCategoryId == category.id}">
                     <a>{{cat.name}} {{ cat.id}}</a>

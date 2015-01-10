@@ -1,5 +1,5 @@
 <div>
-    <div ng-repeat="ad in data.ads" class="panel panel-primary">
+    <div ng-repeat="ad in ctrl.data.ads" class="panel panel-primary">
         <div class="panel-heading">
             <h3 class="panel-title">{{ad.title}}
                 <span class="date">{{ad.date | date: 'd-MMM-yyyy'}}</span>
@@ -22,11 +22,23 @@
     <!--<pagination></pagination>-->
     <!--{{data.numPages}}-->
 
-    <!--<ul class="pagination">-->
+
+
+    <ul class="pagination pagination-sm" ng-cloak>
+        {{ctrl.pagesCount}}
+        {{ctrl.currentPageIndex}}
+        <li ng-repeat="page in ctrl.pages" ng-click="ctrl.setPage(page)" ng-class=""><a>{{page}}</a></li>
+        <!--<li class="disabled"><a href="#">«</a></li>-->
+        <!--<li class="active"><a href="#">1</a></li>-->
+        <!--<li><a href="#">2</a></li>-->
+        <!--<li><a href="#">3</a></li>-->
+        <!--<li><a href="#">4</a></li>-->
+        <!--<li><a href="#">5</a></li>-->
+        <!--<li><a href="#">»</a></li>-->
         <!--<li ng-if="boundaryLinks" ng-class="{disabled: noPrevious()}"><a href ng-click="selectPage(1)">{{getText('first')}}</a></li>-->
         <!--<li ng-if="directionLinks" ng-class="{disabled: noPrevious()}"><a href ng-click="selectPage(page - 1)">{{getText('previous')}}</a></li>-->
         <!--<li ng-repeat="page in pages track by $index" ng-class="{active: page.active}"><a href ng-click="selectPage(page.number)">{{page.text}}</a></li>-->
         <!--<li ng-if="directionLinks" ng-class="{disabled: noNext()}"><a href ng-click="selectPage(page + 1)">{{getText('next')}}</a></li>-->
         <!--<li ng-if="boundaryLinks" ng-class="{disabled: noNext()}"><a href ng-click="selectPage(totalPages)">{{getText('last')}}</a></li>-->
-    <!--</ul>-->
+    </ul>
 </div>
