@@ -22,9 +22,21 @@ adsApp.controller('UserCtrl', ['$scope', '$route', '$location', 'adsData', 'cate
         self.pages.push(i);
     }
 
+    self.setHomePage= function(){
+        self.currentPageIndex=1;
+        self.selectedCategoryId='';
+        self.selectedTownId='';
+        self.filterIds={
+            categoryId: '',
+            townId:''
+        };
+        self.data=adsData.filterAds(self.filterIds);
+    };
+
     self.setPage = function(pageIndex){
         self.data=adsData.getAllAds(pageIndex);
         self.currentPageIndex=pageIndex;
+        console.log(self.data.numPages);
         //$location.path('/user/home');
         //$route.reload();
     };
@@ -43,6 +55,7 @@ adsApp.controller('UserCtrl', ['$scope', '$route', '$location', 'adsData', 'cate
 
     self.filterAds = function(filter){
         self.data=adsData.filterAds(filter);
+        self.currentPageIndex=1;
     };
 
 

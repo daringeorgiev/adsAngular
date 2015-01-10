@@ -4,19 +4,28 @@
 adsApp.factory('adsData', ['$resource', 'baseServiceUrl', function($resource, baseServiceUrl){
     //var resource=$resource(baseServiceUrl + 'ads?pagesize=10&startpage=3');
     var resource;
-    resource=baseServiceUrl;
+    var adsUrl=baseServiceUrl+'ads?';
+    //var filtredUrl=adsUrl;
+    //var pageIndex=1;
+    //resource=baseServiceUrl;
     //resource=resource + '?pagesize=10&startpage=3';
 
     function getAllAds(pageIndex){
-        resource=$resource(resource + 'ads?pagesize=10&startpage=' + pageIndex);
-        //console.log(resource.get());
+        resource=$resource(adsUrl + '&pagesize=10&startpage=' + pageIndex);
+        //console.log(resource);
         return resource.get();
     }
 
     function filterAds(filter){
-        resource=$resource(baseServiceUrl + 'ads?categoryId='+ filter.categoryId + '&townId=' + filter.townId);
+        adsUrl=baseServiceUrl+'ads?';
+        resource=$resource(adsUrl + 'categoryId='+ filter.categoryId + '&townId=' + filter.townId);
+        adsUrl=adsUrl + 'categoryId='+ filter.categoryId + '&townId=' + filter.townId;
+        //console.log(resource);
         return resource.get();
     }
+    //function numPages(){
+    //
+    //}
 
     return {
         getAllAds: getAllAds,
