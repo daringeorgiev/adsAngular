@@ -1,6 +1,9 @@
 /*a:hover{*/
     /*cursor: hand;*/
 /*}*/
+.paginationDiv {
+    text-align: center;
+}
 .logout{
     float: right;
     font-size: 0.8em;

@@ -1,4 +1,5 @@
 <div>
+    <pagination-ads ng-cloak=""></pagination-ads>
     <div ng-repeat="ad in ctrl.data.ads" class="panel panel-primary">
         <div class="panel-heading">
             <h3 class="panel-title">{{ad.title}}
@@ -20,20 +21,5 @@
             </div>
         </div>
     </div>
-
-    <ul class="pagination pagination-sm" ng-cloak>
-        <li ng-class="{'disabled' : ctrl.currentPageIndex == 1}"
-            ng-click="ctrl.setPage( ctrl.currentPageIndex-1)">
-            <a>Prev</a>
-        </li>
-        <li ng-repeat="page in ctrl.pages"
-            ng-click="ctrl.setPage(page)"
-            ng-class="{'active' : ctrl.currentPageIndex == page}">
-            <a>{{page}}</a>
-        </li>
-        <li ng-class="{'disabled' : ctrl.currentPageIndex == ctrl.pages.length}"
-            ng-click="ctrl.setPage( ctrl.currentPageIndex+1)">
-            <a>Next</a>
-        </li>
-    </ul>
+    <pagination-ads></pagination-ads>
 </div>

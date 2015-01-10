@@ -22,9 +22,12 @@ adsApp.controller('HomeCtrl', ['$scope', '$route', 'adsData', 'categoriesData', 
 
     //self.pagesCount=adsData.getAllAds(1).numItems;
     self.pages=[];
-    for(var i=1; i<=5 ;i++){
-        self.pages.push(i);
-    }
+    self.setPagesArray= function (pagesNum){
+        for(var i=1; i<=pagesNum ;i++){
+            self.pages.push(i);
+        }
+    };
+
     self.setHomePage= function(){
         self.currentPageIndex=1;
         self.selectedCategoryId='';

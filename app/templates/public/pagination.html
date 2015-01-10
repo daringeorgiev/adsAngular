@@ -1,0 +1,17 @@
+<div class="paginationDiv">
+    <ul class="pagination pagination-sm" ng-cloak>
+        <li ng-class="{'disabled' : ctrl.currentPageIndex == 1}"
+            ng-click="ctrl.setPage( ctrl.currentPageIndex-1)">
+            <a>Prev</a>
+        </li>
+        <li ng-repeat="page in ctrl.pages"
+            ng-click="ctrl.setPage(page)"
+            ng-class="{'active' : ctrl.currentPageIndex == page}">
+            <a>{{page}}</a>
+        </li>
+        <li ng-class="{'disabled' : ctrl.currentPageIndex == ctrl.pages.length}"
+            ng-click="ctrl.setPage( ctrl.currentPageIndex+1)">
+            <a>Next</a>
+        </li>
+    </ul>
+</div>
