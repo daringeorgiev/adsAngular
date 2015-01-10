@@ -111,8 +111,8 @@
       <file leaf-file-name="left-sidebar-private.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/templates/left-sidebar-private.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.176" vertical-offset="0" max-vertical-offset="875">
-              <caret line="7" column="68" selection-start-line="7" selection-start-column="68" selection-end-line="7" selection-end-column="68" />
+            <state vertical-scroll-proportion="0.352" vertical-offset="0" max-vertical-offset="875">
+              <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -994,8 +994,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/left-sidebar-private.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.176" vertical-offset="0" max-vertical-offset="875">
-          <caret line="7" column="68" selection-start-line="7" selection-start-column="68" selection-end-line="7" selection-end-column="68" />
+        <state vertical-scroll-proportion="0.352" vertical-offset="0" max-vertical-offset="875">
+          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
           <folding />
         </state>
       </provider>
