@@ -4,8 +4,12 @@
             <h3 class="panel-title">Navigation</h3>
         </div>
         <div class="panel-body">
-            <ul class="nav">
-                <li class="active"><a href="#/" ng-click="ctrl.setHomePage()">Home</a></li>
+            <ul class="nav nav-pills nav-stacked">
+                <li ng-class="{'active' : ctrl.pageTitle=='Home'}">
+                    <a href="#/" ng-click="ctrl.setHomePage()">
+                        Home
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
@@ -14,9 +18,9 @@
             <h3 class="panel-title">Please login</h3>
         </div>
         <div class="panel-body">
-            <ul class="nav">
-                <li><a href="#/login">Login</a></li>
-                <li><a href="#/register">Register</a></li>
+            <ul class="nav nav nav-pills nav-stacked">
+                <li ng-class="{'active' : ctrl.pageTitle=='Login'}"><a href="#/login">Login</a></li>
+                <li ng-class="{'active' : ctrl.pageTitle=='Register'}"><a href="#/register">Register</a></li>
             </ul>
         </div>
     </div>

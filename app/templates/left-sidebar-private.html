@@ -4,8 +4,8 @@
             <h3 class="panel-title">Navigation</h3>
         </div>
         <div class="panel-body">
-            <ul class="nav">
-                <li><a href="#/user/home" ng-click="ctrl.setHomePage()">Home</a></li>
+            <ul class="nav nav-pills nav-stacked">
+                <li ng-class="{'active' : ctrl.pageTitle=='User Home'}"><a href="#/user/home" ng-click="ctrl.setHomePage()">Home</a></li>
                 <li><a href="#/user/ads">My Ads</a></li>
                 <li><a href="#/user/ads/publish">Publish New Add</a></li>
                 <li><a href="#/user/ads/edit">Edit Profile</a></li>

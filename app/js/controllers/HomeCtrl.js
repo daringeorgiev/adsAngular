@@ -5,7 +5,8 @@
 adsApp.controller('HomeCtrl', ['$scope', '$route', 'adsData', 'categoriesData', 'townsData', function($scope, $route, adsData, categoriesData, townsData) {
     var self=this;
 
-    self.pageTitle='User Home';
+    self.pageTitle='Home';
+    //self.currentNav='home';
     self.currentPageIndex=1;
     self.selectedCategoryId='';
     self.selectedTownId='';
