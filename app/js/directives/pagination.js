@@ -5,7 +5,7 @@ adsApp.directive('paginationAds', function () {
     return {
         //controller: 'HomeCtrl',
         restrict: 'E',
-        templateUrl: '../../templates/public/pagination.html',
+        templateUrl: '../../templates/directives/pagination.html',
         replace: true
     }
 });

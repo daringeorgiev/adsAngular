@@ -2,7 +2,7 @@ adsApp.directive('categories', function () {
     return {
         //controller: 'HomeCtrl',
         restrict: 'E',
-        templateUrl: '../../templates/public/categories.html',
+        templateUrl: '../../templates/directives/categories.html',
         replace: true
     }
 });
