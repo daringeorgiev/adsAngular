@@ -9,8 +9,8 @@ adsApp.factory('authentication', function () {
         localStorage.setItem(key, angular.toJson(data));
     }
 
-    function getUserData(data) {
-        return angular.fromJson(localStorage.getItem(data));
+    function getUserData(key) {
+        return angular.fromJson(localStorage.getItem(key));
     }
 
     function getHeaders(argument) {

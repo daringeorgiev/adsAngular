@@ -25,4 +25,7 @@ adsApp.controller('PublishCtrl', ['$scope', '$route', '$location', 'adsData', 'c
             $location.path('/');
 
         };
+        self.userData=authentication.getUser();
+
+
     }]);
