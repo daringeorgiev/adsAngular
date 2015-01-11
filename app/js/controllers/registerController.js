@@ -2,21 +2,23 @@
  * Created by darin on 1/2/2015.
  */
 'use strict';
-adsApp.controller('RegisterCtrl', ['$scope', '$location', 'townsData', 'userData', 'notify', function($scope, $location, townsData, userData, notify){
-    this.pageTitle='Register';
+adsApp.controller('RegisterCtrl', ['$scope', '$location', 'townsData', 'userData', 'notify', function ($scope, $location, townsData, userData, notify) {
+    var self = this;
+
+    self.pageTitle = 'Register';
 
     townsData.getTowns()
         .$promise
-        .then(function(data){
-            $scope.towns=data;
+        .then(function (data) {
+            $scope.towns = data;
         });
-    this.register=function(user){
+    self.register = function (user) {
         userData.register(user)
-            .then(function(){
+            .then(function () {
                 $location.path('/login');
-                notify({ message:'Register success. Please login.', classes:'alert-success'});
-            }, function(){
-                notify({ message:'Invalid Register', classes:'alert-danger'});
+                notify({message: 'Register success. Please login.', classes: 'alert-success'});
+            }, function () {
+                notify({message: 'Invalid Register', classes: 'alert-danger'});
             }
         );
     };

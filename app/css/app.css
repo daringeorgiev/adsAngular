@@ -1,38 +1,44 @@
-/*a:hover{*/
-    /*cursor: hand;*/
-/*}*/
+
 .paginationDiv {
     text-align: center;
 }
-.logout{
+
+.logout {
     float: right;
     font-size: 0.8em;
     padding-right: 5%;
 }
+
 .panel-title {
     /*width: 80%;*/
     /*float: left;*/
 }
+
 .panel {
     word-wrap: break-word;
 }
-.header{
+
+.header {
     color: #f5f5f5;
     text-align: center;
 }
-.filterAds  li{
+
+.filterAds li {
     list-style-type: none;
     padding: 2%;
 }
-.adsTextarea{
+
+.adsTextarea {
     width: 100%;
     height: 100%;
     resize: none;
 }
+
 .image {
     height: 100%;
     width: 100%;
 }
+
 .date {
     float: right;
     font-size: 0.8em;

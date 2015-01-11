@@ -1,4 +1,4 @@
-adsApp.directive('towns', function(){
+adsApp.directive('towns', function () {
     return {
         //controller: 'HomeCtrl',
         restrict: 'E',

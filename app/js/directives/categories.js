@@ -1,4 +1,4 @@
-adsApp.directive('categories', function(){
+adsApp.directive('categories', function () {
     return {
         //controller: 'HomeCtrl',
         restrict: 'E',

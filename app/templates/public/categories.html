@@ -4,15 +4,15 @@
     </div>
     <div class="panel-body">
         <ul class="nav nav-pills nav-stacked">
-            <li  ng-click="ctrl.categoryClicked('')"
-                 ng-class="{'active' : ctrl.selectedCategoryId == ''}">
+            <li ng-click="ctrl.categoryClicked('')"
+                ng-class="{'active' : ctrl.selectedCategoryId == ''}">
                 <a>All</a>
             </li>
-            <li  ng-repeat="cat in ctrl.categories"
+            <li ng-repeat="cat in ctrl.categories"
                 ng-click="ctrl.categoryClicked(cat.id)"
                 ng-class="{'active' : ctrl.selectedCategoryId == cat.id}">
 
-                    <a>{{cat.name}} {{ cat.id}}</a>
+                <a>{{cat.name}} {{ cat.id}}</a>
             </li>
         </ul>
     </div>

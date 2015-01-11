@@ -15,7 +15,7 @@ adsApp.controller('UserCtrl', ['$scope', '$route', '$location', 'adsData', 'cate
         self.categories = categoriesData.getCategories();
         self.towns = townsData.getTowns();
 
-        self.user=authentication.getUser();
+        self.user = authentication.getUser();
 
         //ToDo
         self.pages = [];
