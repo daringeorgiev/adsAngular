@@ -17,6 +17,7 @@ adsApp.controller('PublishCtrl', ['$scope', '$route', '$location', 'adsData', 'c
                 $scope.towns = data;
             });
         self.publish = function (data) {
+            //ToDo
             notify(data);
         }
     }]);
