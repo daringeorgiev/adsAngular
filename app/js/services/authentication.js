@@ -18,8 +18,7 @@ adsApp.factory('authentication', function () {
         var userData = getUserData();
         if (userData) {
             headers.Authorization = 'Bearer ' + getUserData().access_token;
-        }
-        ;
+        };
         return headers;
     }
 

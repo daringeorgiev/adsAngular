@@ -47,4 +47,4 @@ adsApp.factory('userData', ['$resource', '$location', 'baseServiceUrl', 'authent
         removeUser: removeUser,
         isAdmin: isAdmin
     }
-}])
+}]);

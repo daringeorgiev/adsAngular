@@ -19,5 +19,10 @@ adsApp.controller('PublishCtrl', ['$scope', '$route', '$location', 'adsData', 'c
         self.publish = function (data) {
             //ToDo
             notify(data);
-        }
+        };
+        self.logout = function () {
+            //ToDo
+            $location.path('/');
+
+        };
     }]);

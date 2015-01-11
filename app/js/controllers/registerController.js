@@ -4,7 +4,6 @@
 'use strict';
 adsApp.controller('RegisterCtrl', ['$scope', '$location', 'townsData', 'userData', 'notify', function ($scope, $location, townsData, userData, notify) {
     var self = this;
-
     self.pageTitle = 'Register';
 
     townsData.getTowns()

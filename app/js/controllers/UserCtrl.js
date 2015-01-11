@@ -24,7 +24,6 @@ adsApp.controller('UserCtrl', ['$scope', '$route', '$location', 'adsData', 'cate
             self.pages.push(i);
         }
 
-
         self.setHomePage = function () {
             self.currentPageIndex = 1;
             self.selectedCategoryId = '';

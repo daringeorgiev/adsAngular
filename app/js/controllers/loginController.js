@@ -3,9 +3,10 @@
  */
 'use strict';
 adsApp.controller('LoginCtrl', ['$scope', '$location', 'notify', 'userData', function ($scope, $location, notify, userData) {
-    this.pageTitle = 'Login';
+    var self=this;
+    self.pageTitle = 'Login';
 
-    this.login = function (user) {
+    self.login = function (user) {
         userData.login(user)
             .then(function () {
                 $location.path('/user/home');
