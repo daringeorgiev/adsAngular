@@ -1,6 +1,7 @@
 /**
  * Created by darin on 1/6/2015.
  */
+'use strict';
 adsApp.factory('authentication', function () {
     var key = 'user';
 

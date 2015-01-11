@@ -1,6 +1,7 @@
 /**
  * Created by darin on 1/6/2015.
  */
+'use strict';
 adsApp.factory('userData', ['$resource', '$location', 'baseServiceUrl', 'authentication', function ($resource, $location, baseServiceUrl, authentication) {
 
     //var resource=$resource(baseServiceUrl, paramDefault, actions)
@@ -36,8 +37,7 @@ adsApp.factory('userData', ['$resource', '$location', 'baseServiceUrl', 'authent
     }
 
     function isAdmin() {
-        //var isAdmin=getUserData.isAdmin;
-        //return isAdmin;
+
     }
 
     return {

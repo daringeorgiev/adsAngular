@@ -1,3 +1,4 @@
+'use strict';
 adsApp.controller('UserCtrl', ['$scope', '$route', '$location', 'adsData', 'categoriesData', 'townsData', 'userData', 'notify', 'authentication',
     function ($scope, $route, $location, adsData, categoriesData, townsData, userData, notify, authentication) {
         var self = this;
@@ -60,9 +61,9 @@ adsApp.controller('UserCtrl', ['$scope', '$route', '$location', 'adsData', 'cate
             self.currentPageIndex = 1;
         };
 
-
         self.logout = function () {
-            userData.logout();
+            //userData.logout();
+            $location.path('/');
             //.then(function(){
             //    $location.path('/home');
             //    notify({ message:'Logout success', classes:'alert-success'});
@@ -70,8 +71,5 @@ adsApp.controller('UserCtrl', ['$scope', '$route', '$location', 'adsData', 'cate
             //    notify({ message:'Logout error', classes:'alert-danger'});
             //}
             //);
-            //console.log('logout error');
-            //notify('logout');
-            //self.currentPageIndex=pageIndex;
         };
     }]);

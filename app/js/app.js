@@ -1,3 +1,4 @@
+'use strict';
 var adsApp = angular.module('adsApp', ['ngResource', 'ngRoute', 'cgNotify'])
     .constant('baseServiceUrl', 'http://softuni-ads.azurewebsites.net/api/')
 

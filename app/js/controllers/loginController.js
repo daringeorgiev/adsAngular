@@ -10,7 +10,6 @@ adsApp.controller('LoginCtrl', ['$scope', '$location', 'notify', 'userData', fun
             .then(function () {
                 $location.path('/user/home');
                 notify({message: 'Login success', classes: 'alert-success'});
-                console.log('bravo22' + user);
             }, function () {
                 notify({message: 'Invalid Login', classes: 'alert-danger'});
             }
