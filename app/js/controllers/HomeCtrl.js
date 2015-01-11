@@ -13,8 +13,10 @@ adsApp.controller('HomeCtrl', ['$scope', '$route', 'adsData', 'categoriesData', 
         categoryId: '',
         townId: ''
     };
+    self.pageCount=0;
 
     self.data = adsData.getAllAds(1);
+
     self.categories = categoriesData.getCategories();
     self.towns = townsData.getTowns();
 
