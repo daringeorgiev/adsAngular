@@ -24,7 +24,7 @@ var adsApp = angular.module('adsApp', ['ngResource', 'ngRoute', 'ui.bootstrap.pa
         });
         $routeProvider.when('/user//ads/publish', {
             templateUrl: 'templates/user/ads/publish.html',
-            controller: 'UserCtrl as ctrl'
+            controller: 'PublishCtrl as ctrl'
         });
         $routeProvider.when('/user//ads/edit', {
             templateUrl: 'templates/user/ads/edit.html',

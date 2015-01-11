@@ -17,7 +17,6 @@ adsApp.controller('UserCtrl', ['$scope', '$route', '$location', 'adsData', 'cate
 
         self.user=authentication.getUser();
 
-        //self.pagesCount=adsData.getAllAds(1).numItems;
         //ToDo
         self.pages = [];
         for (var i = 1; i <= 5; i++) {
